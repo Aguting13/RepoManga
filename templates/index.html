@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Cult</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Café Cult</h1>
+            <div>
+                <a href="{{ url_for('inicio') }}">Inicio</a>
+                <a href="{{ url_for('menu') }}">Menú</a>
+                <a href="{{ url_for('contacto') }}">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <section>
+            <p class="etiqueta">CAFÉ DE ESPECIALIDAD</p>
+            <h2>Un buen café cambia el día.</h2>
+            <p>Un espacio para disfrutar café, comida rica y buenos momentos.</p>
+            <a class="boton" href="{{ url_for('menu') }}">Ver nuestro menú</a>
+        </section>
+    </main>
+
+    <section class="presentacion">
+        <h2>Bienvenidos a Café Cult</h2>
+        <p>Preparamos cada taza con dedicación y buscamos que te sientas como en casa.</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Café Cult</p>
+    </footer>
+</body>
+</html>
