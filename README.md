@@ -1,15 +1,11 @@
 # Café Cult
 
-Proyecto de sitio web para un café, desarrollado con Python, Flask, HTML, CSS y MySQL.
-
-## Objetivo
-
-Aplicar los contenidos aprendidos en el curso mediante un proyecto sencillo y funcional.
+Proyecto de sitio web para un café desarrollado con las tecnologías principales del curso.
 
 ## Tecnologías
 
-- Python
-- Flask
-- HTML
-- CSS
-- MySQL
+- Python: lógica principal del proyecto.
+- HTML: páginas e interfaz del sitio.
+- MySQL: almacenamiento y gestión de los datos.
+
+El proyecto no utiliza Flask ni CSS, para mantenerlo centrado en los contenidos aprendidos.
