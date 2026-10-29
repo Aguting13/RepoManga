@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Café Cultural Escobar{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor nav">
+            <a class="logo" href="{{ url_for('inicio') }}">☕ Café Cultural</a>
+            <nav>
+                <a href="{{ url_for('inicio') }}">Inicio</a>
+                <a href="{{ url_for('carta') }}">Carta</a>
+                <a href="{{ url_for('eventos') }}">Eventos</a>
+                <a href="{{ url_for('nosotros') }}">Nosotros</a>
+                <a href="{{ url_for('contacto') }}">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor contenido">
+        {% with mensajes = get_flashed_messages() %}
+            {% if mensajes %}
+                {% for mensaje in mensajes %}
+                    <div class="flash">{{ mensaje }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Café Cultural Escobar — Proyecto grupal</p>
+    </footer>
+</body>
+</html>
