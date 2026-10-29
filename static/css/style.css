@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f1e8;
+    color: #4b3528;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.encabezado {
+    background: #6b4934;
+    color: white;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.nav {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.contenido {
+    min-height: 75vh;
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+
+.hero,
+.seccion {
+    background: white;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #ddd5cb;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 35px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.etiqueta {
+    color: #a15f25;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.boton,
+button {
+    display: inline-block;
+    background: #6b4934;
+    color: white;
+    border: 0;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta {
+    background: #fffaf4;
+    border: 1px solid #e5d7c8;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    min-width: 220px;
+}
+
+.tarjeta strong {
+    color: #a15f25;
+    font-size: 20px;
+}
+
+.formulario-contenedor {
+    max-width: 700px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario input,
+.formulario textarea,
+.tarjeta input {
+    font: inherit;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #cdbca9;
+    border-radius: 5px;
+}
+
+.flash {
+    background: #e7f2df;
+    border: 1px solid #b9d3aa;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.vacio {
+    color: #77695f;
+}
+
+footer {
+    background: #6b4934;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 760px) {
+    .nav {
+        flex-direction: column;
+        padding: 18px 0;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
