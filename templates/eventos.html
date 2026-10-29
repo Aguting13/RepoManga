@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Eventos | Café Cultural Escobar{% endblock %}
+
+{% block content %}
+<section class="seccion">
+    <p class="etiqueta">AGENDA</p>
+    <h1>Próximos eventos</h1>
+
+    <!-- TODO 9 (ROL 6 — Diseño/Frontend Eventos)
+         Completar el diseño de eventos según la consigna. -->
+    <div class="tarjetas">
+        {% for evento in eventos %}
+            <article class="tarjeta">
+                <h2>{{ evento.titulo }}</h2>
+                <p>{{ evento.descripcion }}</p>
+                <p><strong>Fecha:</strong> {{ evento.fecha }}</p>
+
+                <form action="{{ url_for('inscribir') }}" method="post">
+                    <input type="hidden" name="evento_id" value="{{ evento.id }}">
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Inscribirme</button>
+                </form>
+            </article>
+        {% else %}
+            <p class="vacio">Todavía no hay eventos para mostrar.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
