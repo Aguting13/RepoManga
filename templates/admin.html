@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin | Café Cultural Escobar{% endblock %}
+
+{% block content %}
+<section class="seccion">
+    <p class="etiqueta">ADMINISTRACIÓN</p>
+    <h1>Panel de administración</h1>
+
+    <!-- TODO 10 (ROL 9 — Admin)
+         Completar la presentación de mensajes e inscripciones. -->
+    <h2>Mensajes de contacto</h2>
+    {% if mensajes %}
+        {% for mensaje in mensajes %}
+            <article class="tarjeta">
+                <h3>{{ mensaje.nombre }}</h3>
+                <p>{{ mensaje.email }}</p>
+                <p>{{ mensaje.mensaje }}</p>
+                <small>{{ mensaje.fecha_envio }}</small>
+            </article>
+        {% endfor %}
+    {% else %}
+        <p class="vacio">No hay mensajes para mostrar.</p>
+    {% endif %}
+
+    <h2>Inscripciones</h2>
+    {% if inscripciones %}
+        {% for inscripcion in inscripciones %}
+            <article class="tarjeta">
+                <h3>{{ inscripcion.evento_titulo }}</h3>
+                <p>{{ inscripcion.nombre }} — {{ inscripcion.email }}</p>
+                <small>{{ inscripcion.fecha_registro }}</small>
+            </article>
+        {% endfor %}
+    {% else %}
+        <p class="vacio">No hay inscripciones para mostrar.</p>
+    {% endif %}
+</section>
+{% endblock %}
