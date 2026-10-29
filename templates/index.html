@@ -1,39 +1,35 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Cult</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
-</head>
-<body>
-    <header>
-        <nav>
-            <h1>Café Cult</h1>
-            <div>
-                <a href="{{ url_for('inicio') }}">Inicio</a>
-                <a href="{{ url_for('menu') }}">Menú</a>
-                <a href="{{ url_for('contacto') }}">Contacto</a>
-            </div>
-        </nav>
-    </header>
+{% extends 'base.html' %}
 
-    <main class="hero">
-        <section>
-            <p class="etiqueta">CAFÉ DE ESPECIALIDAD</p>
-            <h2>Un buen café cambia el día.</h2>
-            <p>Un espacio para disfrutar café, comida rica y buenos momentos.</p>
-            <a class="boton" href="{{ url_for('menu') }}">Ver nuestro menú</a>
-        </section>
-    </main>
+{% block title %}Inicio | Café Cultural Escobar{% endblock %}
 
-    <section class="presentacion">
-        <h2>Bienvenidos a Café Cult</h2>
-        <p>Preparamos cada taza con dedicación y buscamos que te sientas como en casa.</p>
-    </section>
+{% block content %}
+<section class="hero">
+    <p class="etiqueta">CAFÉ CULTURAL ESCOBAR</p>
+    <h1>Donde el café y las historias se encuentran.</h1>
+    <p>Un espacio para disfrutar café, cultura, libros, música y buenos momentos.</p>
+    <a class="boton" href="{{ url_for('carta') }}">Ver la carta</a>
+</section>
 
-    <footer>
-        <p>© 2026 Café Cult</p>
-    </footer>
-</body>
-</html>
+<section class="seccion">
+    <h2>Bienvenidos</h2>
+    <p>Somos un café cultural pensado para compartir una buena taza y experiencias con la comunidad.</p>
+</section>
+
+<section class="seccion">
+    <h2>Próximos eventos</h2>
+    <div class="tarjetas">
+        <article class="tarjeta">
+            <h3>🎵 Música en vivo</h3>
+            <p>Una noche para disfrutar música y café.</p>
+        </article>
+        <article class="tarjeta">
+            <h3>☕ Degustación</h3>
+            <p>Conocé distintos métodos y granos.</p>
+        </article>
+        <article class="tarjeta">
+            <h3>📚 Tarde de lectura</h3>
+            <p>Un encuentro para compartir libros.</p>
+        </article>
+    </div>
+</section>
+{% endblock %}
